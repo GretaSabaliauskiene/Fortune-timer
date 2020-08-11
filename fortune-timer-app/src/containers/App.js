@@ -11,13 +11,13 @@ function App() {
     <Router>
     <Layout>
       <NavBar/>
-      <Route path="/timeNow" component={TimeNowPage}/>
+      <Switch>
+      <Route path="/" exact component={TimeNowPage}/>
       <Route path="/setTimer" component={SetTimerPage}/>
       <Route path="/timeMap" component={TimeMapPage}/>
-
-
+    </Switch>
     </Layout>
-    </Router>
+    </Router> 
     
     );
 }
