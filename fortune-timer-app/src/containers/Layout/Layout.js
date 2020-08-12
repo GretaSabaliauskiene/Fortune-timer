@@ -12,7 +12,6 @@ const Styles = styled.div`
 const Layout = (props) => {
     return(
     <Styles>
-        
         <Container fluid>
             {props.children}
         </Container>

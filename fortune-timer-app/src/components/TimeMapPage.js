@@ -1,8 +1,15 @@
 import React from 'react';
 
+import { Container, Row, Col } from 'react-bootstrap';
+
+
 function timeMap(){
     return (
-        <h1>Time map page</h1>
+        <Row>
+            <Col md={{ span: 8, offset: 2 }}>
+                <h1>time map page</h1>
+            </Col>
+        </Row>
     )
 }
 

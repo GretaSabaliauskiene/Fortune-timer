@@ -4,7 +4,7 @@ import Clock from 'react-live-clock';
 export default class MyComponent extends React.Component {
     render() {
       return(
-      <Clock format={'HH:mm:ss'} ticking={true} timezone={'EU/Lithuania'} />
+      <Clock format={'HH:mm:ss A'} ticking={true} timezone={'EU/Lithuania'} />
       )
     }
 }
