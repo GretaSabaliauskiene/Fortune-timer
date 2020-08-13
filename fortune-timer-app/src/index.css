@@ -24,11 +24,9 @@ code {
   justify-content: center;
   align-items: center;
   margin-top: 138px;
-
 }
 
 .container-fluid{
   border:1px solid white;
   height:90vh;
-  
 }

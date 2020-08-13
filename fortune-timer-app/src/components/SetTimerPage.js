@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+import Message from './Timer-box/StickyNote';
 import { Row, Col } from 'react-bootstrap';
 import Countdown from '../components/Timer-box/Countdown';
 
@@ -38,7 +39,9 @@ class SetTimer extends Component{
                 <Col  md={{ span: 8, offset: 2 }}>
                    <Countdown futureDate={countdown.futureDate} ></Countdown>
                 </Col>
-       
+                <Col  md={{ span: 2, offset: 8 }}>
+                    <Message/>
+                </Col>
             </Row>
         </Styles>
     )}
