@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import {basic_notebook_pen} from 'react-icons-kit/linea/basic_notebook_pen'
-import { Icon } from 'react-icons-kit'
+import {basic_notebook_pen} from 'react-icons-kit/linea/basic_notebook_pen';
+import { Icon } from 'react-icons-kit';
+import StickyNotes from '../Timer-box/StickyNotes';
+
+
 
 
 
@@ -14,6 +17,7 @@ const Styles = styled.div`
   display:flex;
   justify-content: center;
   padding:15px;
+ 
 }
 svg{
   cursor:pointer
@@ -23,7 +27,7 @@ span{
 }
 `;
 
-class stickyNote extends Component{
+class ModalNotes extends Component{
   constructor(){
     super()
     this.state={
@@ -38,20 +42,17 @@ class stickyNote extends Component{
       <Styles>
         <Container>
           <Row>
-            <Col>
-            <div style={{ color: '#FEDE57' }}>
+            <Col >
+            <div style={{ color: '#D9D7D8' }}>
             <Icon onClick={()=>{this.handleModal()}} size={30} icon={basic_notebook_pen} />   
             <span>notes</span>       
             </div>
-                <Modal show={this.state.show}>
-                    <Modal.Header>Create a note</Modal.Header>
+                <Modal show={this.state.show} onHide={()=>this.handleModal()}>
+                    <Modal.Header closeButton>Create a note</Modal.Header>
                     <Modal.Body>
-                        hi
+                      <StickyNotes/>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button onClick={()=>{this.handleModal()}}>
-                            Close
-                        </Button>
                     </Modal.Footer>
                 </Modal>
             </Col>
@@ -64,4 +65,4 @@ class stickyNote extends Component{
   }
 }
 
-export default stickyNote;
+export default ModalNotes;

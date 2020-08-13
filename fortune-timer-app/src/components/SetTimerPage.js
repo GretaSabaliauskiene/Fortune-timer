@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import Message from './Timer-box/StickyNote';
+import Message from './Timer-box/ModalWindow';
 import { Row, Col } from 'react-bootstrap';
 import Countdown from '../components/Timer-box/Countdown';
 
